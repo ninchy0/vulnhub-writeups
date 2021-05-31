@@ -5,5 +5,5 @@ writeups. Hope this lame writeup of mine helps you :V
 
 Regards, ninchy0.
 
-### Links to the vulnhub machines
-- <a href="https://www.vulnhub.com/entry/basic-pentesting-1,216/">Basic_Pentesting1</a> 
+### Links to the writeups
+- [Basic_Pentesting1](https://github.com/ninchy0/vulnhub-writeups/blob/main/Basic_pentesting1/basic_pentesting1.md)
