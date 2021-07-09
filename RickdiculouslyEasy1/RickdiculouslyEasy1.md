@@ -2,7 +2,7 @@
 
 	NOTE: The box contains 130 points.
 
-export IP=192.168.1.66 (Do netdiscover to find the ip of the box.)
+    export IP=192.168.1.66 (Do netdiscover to find the ip of the box.)
 
 # Nmap Result (ALL port scan)
 
@@ -316,6 +316,9 @@ FLAG: {Ionic Defibrillator} - 30 points
 ```
 
 
-    Plot twist: Not gonna lie, I went through other people's walkthrough for some part without any guilt. I got stucked in the rick's SAFE thing.
-    I did made a mistake right at the beginning too by not scanning all the ports :V
+Plot twist: Not gonna lie, I went through other people's walkthrough for some part without any guilt. I got stucked in the rick's SAFE thing.
+I did made a mistake right at the beginning too by not scanning all the ports :V
+Keep learning without losing motivation everyone.
+Take breaks if you need to.
+
 
