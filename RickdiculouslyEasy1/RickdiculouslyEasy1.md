@@ -4,7 +4,7 @@
 
     export IP=192.168.1.66 (Do netdiscover to find the ip of the box.)
 
-# Nmap Result (ALL port scan)
+# Nmap Result (All port scan)
 
 ```
 PORT      STATE SERVICE    VERSION
@@ -90,7 +90,7 @@ local: FLAG.txt remote: FLAG.txt
 42 bytes received in 0.00 secs (35.0561 kB/s)
 ```
 
-There's was nothing special in the pub directory.
+There's was nothing special in the pub directory. \
 So, Let's cat out the flag we got here that we just downloaded from the ftp server.
 ```bash
 ┌──(kali㉿kali)-[~]
@@ -102,7 +102,7 @@ FLAG{Whoa this is unexpected} - 10 Points
 
 # Flag 2 (HTTP server) Port 80
 
-## Directory Enumeration using GObuster
+## Directory Enumeration using gobuster
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ gobuster dir -u http://$IP -w /opt/directory-list-2.3-medium.txt -q -x txt,php,bin,bak                                         1 ⨯
@@ -133,7 +133,7 @@ You've really done it this time Morty. Let me at least hide them..
 I'd delete them entirely but I know you'd go bitching to your mom. That's the last thing I need. 
 ```
 
-Checking the page source of passwords.html
+Checking the page source of passwords.html \
 We see the password is commented there. Nice Xd
 
 Source code
@@ -152,6 +152,7 @@ I'd delete them entirely but I know you'd go bitching to your mom. That's the la
 
 # Flag 3 (port 9090)
 
+Check the http server in your browser. \
 Easy flag? Lol..
 ```
 FLAG {There is no Zeus, in your face!} - 10 Points
@@ -183,10 +184,7 @@ FLAG{Flip the pickle Morty!} - 10 Points
 
 # Flag 6 (port 22222)
 
-See they moved ssh service to port 22222 instead of 22.
-Had to scan all the ports just because I stucked trying over and over again on the default port. 
-	
-	Don't tell why i didn't scanned all the ports at first to begin with.. Xd :V
+I tried winter as password for Summer and voila... it worked
 
 ```bash
 ┌──(kali㉿kali)-[~]
@@ -215,13 +213,20 @@ FLAG.txt
 FLAG{Get off the high road Summer!} - 10 Points
 ```
 
-Notice that they filtered the cat command to literally show a dumb cat? haha
+Notice that they filtered the cat command to literally show a dumb cat? haha ...
 
 
 # Flag 7 
 
-```
-[Summer@localhost tmp]$ head journal.txt
+So, i downloaded all the file from Morty's directory to my host machine. \
+I then used strings jpg_file and found out the password for the zip file.
+
+> Password = Meeseek
+Unzip the file and we get the flag.
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ head journal.txt
 Monday: So today Rick told me huge secret. He had finished his flask and was on to commercial grade paint solvent. 
 He spluttered something about a safe, and a password. Or maybe it was a safe password... 
 Was a password that was safe? Or a password to a safe? Or a safe password to a safe?
@@ -254,9 +259,10 @@ Follow these clues, in order
 One of the words in my old bands name.
 ```
 
-Rick's old band = 'The Flesh Curtains'
-So, i wrote a python script for generating the wordlist with 1 uppercase character, 1 digit and one of the words from the old band.
-	Here's the link for [Python Script](https://github.com/ninchy0/vulnhub-writeups/blob/main/RickdiculouslyEasy1/wordlist.py)
+Rick's old band = 'The Flesh Curtains' \
+So, i wrote a python script for generating the wordlist with 1 uppercase character, 1 digit and one of the words from the old band. \
+
+Here's the link for [Python Script](https://github.com/ninchy0/vulnhub-writeups/blob/main/RickdiculouslyEasy1/wordlist.py)
 	
 
 
@@ -284,10 +290,7 @@ So, i wrote a python script for generating the wordlist with 1 uppercase charact
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ ssh RickSanchez@192.168.1.66 -p 22222                                                                                        255 ⨯
-RickSanchez@192.168.1.66's password: 
-Last failed login: Sat Jul 10 02:08:49 AEST 2021 from 192.168.1.70 on ssh:notty
-There were 1328 failed login attempts since the last successful login.
-Last login: Thu Sep 21 09:45:24 2017
+RickSanchez@192.168.1.66's password: P7Curtains
 
 
 [RickSanchez@localhost ~]$ id
@@ -316,9 +319,9 @@ FLAG: {Ionic Defibrillator} - 30 points
 ```
 
 
-Plot twist: Not gonna lie, I went through other people's walkthrough for some part without any guilt. I got stucked in the rick's SAFE thing.
-I did made a mistake right at the beginning too by not scanning all the ports :V
-Keep learning without losing motivation everyone.
+Plot twist: Not gonna lie, I went through other people's walkthrough for some part without any guilt. I got stucked in the rick's SAFE thing. \ 
+I did made a mistake right at the beginning too by not scanning all the ports :V \
+Keep learning without losing motivation everyone. \ 
 Take breaks if you need to.
 
 
